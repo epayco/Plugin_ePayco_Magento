@@ -1,0 +1,8 @@
+
+ paramArray
+(
+    [usuarioId] => 28944
+    [ref_pol] => 2465839
+    [estado_pol] => 4
+    [ref_venta] => 100000025
+)
