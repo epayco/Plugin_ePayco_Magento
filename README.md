@@ -18,7 +18,7 @@
 
 ## Instalación
 
-1. [Descarga el plugin.](https://github.com/epayco/Plugin_ePayco_Magento/releases/tag/1.9.2.4).
+1. [Descarga el plugin.](https://github.com/epayco/Plugin_ePayco_Magento/releases/tag/1.9.2.4)
 2. En la ruta app/etc/modules Suba el archivo que esta en app/etc/modules/Payco_Payco.xml
 3. En la ruta app/design/frontend/base/default/template Suba los archivos que esta en app/design/frontend/base/default/template/payco.
 4. En la ruta app/locale/en_US Suba el archivo app/locale/en_US/Payco_Payco.csv.
