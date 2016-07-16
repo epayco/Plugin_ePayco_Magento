@@ -33,10 +33,10 @@
 
 ## Pasos
 
-<img src="ImgTutorialMagento/tuto-1.png" width="400px"/>
-<img src="ImgTutorialMagento/tuto-2.png" width="400px"/>
-<img src="ImgTutorialMagento/tuto-3.png" width="400px"/>
-<img src="ImgTutorialMagento/tuto-4.png" width="400px"/>
+<img src="ImgTutorialMagento/tuto-1.jpg" width="400px"/>
+<img src="ImgTutorialMagento/tuto-2.jpg" width="400px"/>
+<img src="ImgTutorialMagento/tuto-3.jpg" width="400px"/>
+<img src="ImgTutorialMagento/tuto-4.jpg" width="400px"/>
 
 ## Versiones
 * [ePayco plugin Magento v1.9.2.4](https://github.com/epayco/Plugin_ePayco_Magento/releases/tag/1.9.2.4).
