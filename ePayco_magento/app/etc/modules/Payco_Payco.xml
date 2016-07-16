@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Payco_Payco>
+        <active>true</active>
+        <codePool>local</codePool>
+        <depends>
+            <Mage_Payment />
+        </depends>   
+        </Payco_Payco>
+    </modules>
+</config>

@@ -1,0 +1,28 @@
+Pasos de Instalación 
+
+Para instalar el plugin correctamente debe seguir las rutas y subir cada carpeta manualmente.
+
+Paso 1:En la ruta app/etc/modules Suba el archivo que esta en app/etc/modules/Payco_Payco.xml
+
+Paso 2: En la ruta app/design/frontend/base/default/template Suba los archivos que esta en app/design/frontend/base/default/template/payco
+
+Paso 3: En la ruta app/locale/en_US Suba el archivo app/locale/en_US/Payco_Payco.csv
+
+Paso4: En la ruta app/code/local suba la carpeta app/code/local/Payco
+
+Si no existe el directorio local debe crearlo y darle permisos de lectura y escritura respectivos.
+
+Paso 5: Revise los pasos 1 a 4 que tengan la misma ruta y archivos.
+
+Paso 6: Ingrese a su panel Administrador y borre la cache de magento
+
+Paso 7: En su administrador de magento vaya a System/Configuration/Sales/Payment Methods
+
+Debe ver el medio de pago ePayco
+
+Paso 8: Ingrese el p_cust_id_cliente y la p_key (Valores obtenidos en su panel de clientes).
+
+Paso 9: Guarde la configuración, borre caches y verifique que todo este funcionando correctamente.
+
+Paso 10: Haga pruebas de compras y en los metodos de pago debe aparecer ePayco.
+

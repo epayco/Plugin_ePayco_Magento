@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Payco_Payco>
+            <version>1.9.0</version>
+        </Payco_Payco>
+    </modules>
+    <frontend>
+        <routers>
+            <payco>
+                <use>standard</use>
+                <args>
+                    <module>Payco_Payco</module>
+                    <frontName>Payco</frontName>
+                </args>
+            </payco>
+        </routers>
+    </frontend>
+    <global>
+        <models>
+            <payco>
+                <class>Payco_Payco_Model</class>
+            </payco>
+        </models>
+        <resources>
+            <payco_setup>
+                <setup>
+                    <module>Payco_Payco</module>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </payco_setup>
+            <payco_write>
+                <use>core_write</use>
+            </payco_write>
+            <payco_read>
+                <use>core_read</use>
+            </payco_read>
+        </resources>
+        <helpers>
+            <payco>
+                <class>Payco_Payco_Helper</class>
+            </payco>
+        </helpers>
+        <blocks>
+            <payco><class>Payco_Payco_Block</class></payco>
+        </blocks>
+    </global>
+
+    <default>
+        <payment>
+            <payco>
+                <active>0</active>
+                <model>payco/payco</model>
+                <order_status>1</order_status>
+                <title>Payco</title>
+                <p_cust_id_cliente />
+                <p_key />
+                <payco_url />
+            </payco>
+        </payment>
+    </default>
+</config>
