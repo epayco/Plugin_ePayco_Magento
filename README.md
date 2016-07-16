@@ -44,3 +44,4 @@
 
 ## Versiones
 * [ePayco plugin Magento v1.9.2.4](https://github.com/epayco/Plugin_ePayco_Magento/releases/tag/1.9.2.4).
+* [ePayco plugin Magento v1.5.0.0](https://github.com/epayco/Plugin_ePayco_Magento/releases/tag/1.5.0.0).
