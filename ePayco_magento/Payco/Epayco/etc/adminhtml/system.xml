@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+     <system>
+        <section id="payment">
+            <group id="epayco" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>ePayco v2.0.0</label>
+                <field id="active" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Habilitar/Deshabilitar</label>
+                    <comment>Habilitar o deshabilitar ePayco Checkout</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="payco_title" translate="label" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Título</label>
+                    <comment>Corresponde al titulo que el usuario ve durante el checkout.</comment>
+                </field>
+                <field id="payco_description" translate="label" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Descripción</label>
+                    <comment>Corresponde a la descripción que verá el usuaro durante el checkout.</comment>
+                </field>
+                <field id="payco_merchant" translate="label" type="text" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>P_CUST_ID_CLIENTE</label>
+                    <comment>ID de cliente que lo identifica en ePayco. Lo puede encontrar en su panel de clientes en la opción configuración.</comment>
+                </field>
+                <field id="payco_key" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>P_KEY</label>
+                    <comment>Llave para firmar la información enviada y recibida de ePayco. Lo puede encontrar en su panel de clientes en la opción configuración.</comment>
+                </field>
+                <field id="payco_public_key" translate="label" type="text" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Public_KEY</label>
+                    <comment>LLave para autenticar y consumir los servicios de ePayco, Proporcionado en su panel de clientes en la opción configuración.</comment>
+                </field>
+                <field id="payco_callback" translate="label" type="text" sortOrder="7" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>URL De Respuesta</label>
+                    <comment>Url de respuesta para confirmar los pagos desde ePayco.</comment>
+                </field>
+                <field id="payco_confirmation" translate="label" type="text" sortOrder="8" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>URL de confirmación</label>
+                    <comment>Url de la tienda donde ePayco confirma el pago.</comment>
+                </field>
+                 <field id="payco_test" translate="label" type="select" sortOrder="9" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Modo Pruebas</label>
+                    <comment>Habilitar el envio de pago en modo pruebas</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="vertical_cs" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Tipo de Checkout</label>
+                    <comment>(Onpage Checkout, el usuario a pagar permanece en el sitio) o (Standart Checkout, el usuario a pagar se redirige a la puerta de enlace de ePayco)</comment>
+                    <source_model>Payco\Epayco\Model\Config\Source\Helper\Vertical</source_model>
+                </field>
+                <field id="payco_sort_order" translate="label" type="text" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <label>Orden</label>
+                </field>                
+            </group>
+        </section>
+    </system>
+</config>

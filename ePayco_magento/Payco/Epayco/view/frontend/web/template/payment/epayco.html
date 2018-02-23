@@ -1,0 +1,107 @@
+<div class="payment-method" data-bind="css: {'_active': (getCode() == isChecked())}">
+    <div class="payment-method-title field choice">
+        <input type="radio"
+               name="payment[method]"
+               class="radio"
+               data-bind="attr: {'id': getCode()}, value: getCode(), checked: isChecked, click: selectPaymentMethod, visible: isRadioButtonVisible()"/>
+        <label data-bind="attr: {'for': getCode()}" class="label"><span data-bind="text: getTitle()"></span></label>
+    </div>
+    <div class="payment-method-content">
+        <div class="actions-toolbar">
+            <div class="primary">
+                 <form>
+        <script
+            src="https://checkout.epayco.co/checkout.js"
+            class="epayco-button"
+            data-epayco-key="491d6a0b6e992cf924edd8d3d088aff1"
+            data-epayco-amount="50000"
+            data-epayco-name="Vestido Mujer Primavera"
+            data-epayco-description="Vestido Mujer Primavera"
+            data-epayco-currency="cop"
+            data-epayco-country="co"
+            data-epayco-test="true"
+            data-epayco-external="false"
+            data-epayco-response="https://ejemplo.com/respuesta.html"
+            data-epayco-confirmation="https://ejemplo.com/confirmacion">
+        </script>
+    </form>
+                <button class="action primary checkout"
+                        type="submit"
+                        data-bind="
+                        click: placeOrder,
+                        attr: {title: $t('Place Order')},
+                        css: {disabled: !isPlaceOrderActionAllowed()},
+                        enable: (getCode() == isChecked())
+                        "
+                        disabled>
+                    <span data-bind="i18n: 'Place Order'"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div data-bind="afterRender: function() {
+        function loadScripts(array,callback){
+            var loader = function(src,handler){
+                var script = document.createElement('script');
+                script.src = src;
+                script.onload = script.onreadystatechange = function(){
+                    script.onreadystatechange = script.onload = null;
+                    handler();
+                }
+                var head = document.getElementsByTagName('head')[0];
+                (head || document.body).appendChild( script );
+            };
+            (function run(){
+                if(array.length!=0){
+                    loader(array.shift(), run);
+                }else{
+                    callback && callback();
+                }
+            })();
+        }
+
+        loadScripts([
+           'https://checkout.epayco.co/checkout.js'
+        ],function(){
+            var handler = ePayco.checkout.configure({
+                key: '45b960805ced5c27ce34b1600b4b9f54',
+                test: true
+            })
+
+            var data={
+              //Parametros compra (obligatorio)
+              name: 'Prueba Magento 2',
+              description: 'Prueba Magento 2',
+              invoice: '1234',
+              currency: 'cop',
+              amount: '12000',
+              tax_base: '0',
+              tax: '0',
+              country: 'co',
+              lang: 'en',
+
+              //Onpage='false' - Standard='true'
+              external: 'false',
+
+
+              //Atributos opcionales
+              extra1: 'extra1',
+              extra2: 'extra2',
+              extra3: 'extra3',
+              confirmation: 'http://secure2.payco.co/prueba_curl.php',
+              response: 'http://secure2.payco.co/prueba_curl.php',
+
+              //Atributos cliente
+              name_billing: 'Andres Perez',
+              address_billing: 'Carrera 19 numero 14 91',
+              type_doc_billing: 'cc',
+              mobilephone_billing: '3050000000',
+              number_doc_billing: '100000000'
+            }
+ 
+            alert('All things are loaded');
+            handler.open(data)
+        });
+
+    }"></div>
+</div>
