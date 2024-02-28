@@ -64,7 +64,6 @@ class Payco_Payco_Model_Payco extends Mage_Payment_Model_Method_Abstract {
         //$BAddress = $order->getBillingAddress();
 
         $extra1 = 'Magento Plugin V 1.9';
-
         $params = array(
             'p_cust_id_cliente' => $p_cust_id_cliente,
             'p_key' => $p_key,
@@ -75,15 +74,15 @@ class Payco_Payco_Model_Payco extends Mage_Payment_Model_Method_Abstract {
             'p_base_tax' => $p_base_tax,
             'p_signature' => $p_signature,
             'p_currency_code' => $p_currency_code,
-            'p_billing_name' => $order->getShippingAddress()->getFirstname(),
-            'p_billing_last_name'=>$order->getShippingAddress()->getLastname(),
+            'fullname' => "",
             'p_billing_email' => $order->getCustomerEmail(),
-            'p_billing_address' => $order->getShippingAddress()->getStreet1() . ' ' . $order->getShippingAddress()->getStreet2(),
-            'p_billing_city' => $order->getShippingAddress()->getCity(),
-            'p_billing_phone' => $order->getShippingAddress()->getTelephone(), 
+            'p_billing_address' => "",
+            'p_billing_city' => "",
+            'p_billing_phone' =>"", 
             'p_test_request' => $p_test_request,
             'p_url_response' => Mage::getUrl('payco/payment/response'),
             'p_url_confirmation' => Mage::getUrl('payco/payment/confirm'),
+            'country'=> "CO",
             'p_extra1' => $extra1,
             
         );
