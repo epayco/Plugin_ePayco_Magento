@@ -46,7 +46,7 @@
                                 <show_in_store>0</show_in_store>
                         </p_cust_id_cliente>
                         <p_key translate="label">
-                                <label>P_KEY</label>
+                                <label>PUBLICK_KEY</label>
                                 <frontend_type>text</frontend_type>
                                 <sort_order>50</sort_order>
                                 <show_in_default>1</show_in_default>
